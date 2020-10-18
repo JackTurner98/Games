@@ -17,7 +17,7 @@ class Board:
 
     # Fills the tiles array with alternating colors
     def createBoard(self):
-        currColor = 1  # 1 == White; 0 == Black
+        currColor = 0  # 1 == White; 0 == Black
         for i in range(self.size):      # Numbers
             for j in range(self.size):  # Letters
                 self.tiles[i][j] = Tile(currColor)
@@ -26,10 +26,20 @@ class Board:
 
     # Prints a pretty version of the game board
     def printBoard(self):
-        lineStr = ""
-        for i in self.tiles:
-            for j in i:
+
+        lineStr = "  "
+        for i in range(self.size):
+            lineStr += " {} ".format(i)
+        print(lineStr)
+
+        for i, ytile in enumerate(self.tiles):
+            lineStr = "{} ".format(i)
+            for j in ytile:
                 lineStr += "[{}]".format(j.getColor())
-            print(lineStr)
-            lineStr = ""
+            print(lineStr + " {}".format(i))
+
+        lineStr = "  "
+        for i in range(self.size):
+            lineStr += " {} ".format(i)
+        print(lineStr)
 
