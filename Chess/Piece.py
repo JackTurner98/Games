@@ -5,7 +5,6 @@ class Piece:
 
     def __init__(self, color):
         self.color = color
-        self.moves = []
 
     def getBoard(self):
         return self.board

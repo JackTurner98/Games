@@ -1,6 +1,8 @@
-from Piece import  Piece
+from Piece import Piece
+from Move import Move
 
 class Pawn(Piece):
+    DIRECTIONS = 8
     def __init__(self, color):
         super().__init__(color)
         self.setMoves()
@@ -9,10 +11,7 @@ class Pawn(Piece):
         tempMoves = []
         # White Pieces
         if self.color == 1:
-            tempMoves.append([-1, 1])
-            tempMoves.append([0, 1])
-            tempMoves.append([1, 1])
-            print(tempMoves)
+            self.moves = [Move(-1, -1, 1), Move(0, -1, -1), Move(1, -1, 1), None, None, None, None, None]
         # Black Pieces
         else:
-            pass
+            self.moves = [Move(-1, 1, 1), Move(0, 1, -1), Move(1, 1, 1), None, None, None, None, None]
