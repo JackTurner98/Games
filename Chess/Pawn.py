@@ -6,6 +6,7 @@ class Pawn(Piece):
     def __init__(self, color):
         super().__init__(color)
         self.setMoves()
+        self.name = "P" #+ str(color)
 
     def setMoves(self):
         tempMoves = []

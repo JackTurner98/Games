@@ -69,37 +69,23 @@ class Board:
 
     # Prints a pretty version of the game board
     def printBoard(self):
+        # Print x Coords on top of board
         lineStr = "  "
         for i in range(self.size):
             lineStr += " {} ".format(i)
         print(lineStr)
 
         for i, ytile in enumerate(self.tiles):
-            lineStr = "{} ".format(i)
-            for j in ytile:
-                lineStr += "[{}]".format(j.getColor())
-            print(lineStr + " {}".format(i))
-
-        lineStr = "  "
-        for i in range(self.size):
-            lineStr += " {} ".format(i)
-        print(lineStr)
-
-    def printBoard(self):
-        lineStr = "  "
-        for i in range(self.size):
-            lineStr += " {} ".format(i)
-        print(lineStr)
-
-        for i, ytile in enumerate(self.tiles):
+            # Start and end with y coord
             lineStr = "{} ".format(i)
             for j in ytile:
                 if j is not None:
-                    lineStr += "[{}]".format(j.getColor())
+                    lineStr += "[{}]".format(j.getName())
                 else:
                     lineStr += "[ ]"
             print(lineStr + " {}".format(i))
 
+        # Print x Coords on bottom of board
         lineStr = "  "
         for i in range(self.size):
             lineStr += " {} ".format(i)
