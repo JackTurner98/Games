@@ -11,7 +11,9 @@ class Pawn(Piece):
         tempMoves = []
         # White Pieces
         if self.color == 1:
-            self.moves = [Move(-1, -1, 1), Move(0, -1, 1), Move(1, -1, 1), None, None, None, None, None]
+            self.moves = [Move('NW', 1), Move('N', 1), Move('NE', 1), Move('E', 0),
+                          Move('SE', 0), Move('S', 0), Move('SW', 0), Move('W', 0)]
         # Black Pieces
         else:
-            self.moves = [Move(-1, 1, 1), Move(0, 1, 1), Move(1, 1, 1), None, None, None, None, None]
+            self.moves = [Move('NW', 0), Move('N', 0), Move('NE', 0), Move('E', 0),
+                          Move('SE', 1), Move('S', 1), Move('SW', 1), Move('W', 0)]
