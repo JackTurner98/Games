@@ -1,5 +1,11 @@
 from Pawn import Pawn
+from Rook import Rook
+from Knight import Knight
+from Bishop import  Bishop
+from Queen import Queen
+from King import King
 from Tile import Tile
+
 # 1  [1] [0] [1] [0] [1] [0] [1] [0]
 # 2  [0] [1] [0] [1] [0] [1] [0] [1]
 # 3  [1] [0] [1] [0] [1] [0] [1] [0]
@@ -39,33 +45,33 @@ class Board:
             self.tiles[self.BLACK_PAWN_ROW][i] = Pawn(0)
             self.tiles[self.WHITE_PAWN_ROW][i] = Pawn(1)
 
-        # # Rooks
-        # self.tiles[self.BLACK_KING_ROW][0] = Rook(0)
-        # self.tiles[self.BLACK_KING_ROW][7] = Rook(0)
-        #
-        # self.tiles[self.WHITE_KING_ROW][0] = Rook(1)
-        # self.tiles[self.WHITE_KING_ROW][7] = Rook(1)
-        #
-        # # Knights
-        # self.tiles[self.BLACK_KING_ROW][1] = Knight(0)
-        # self.tiles[self.BLACK_KING_ROW][6] = Knight(0)
-        #
-        # self.tiles[self.WHITE_KING_ROW][1] = Knight(1)
-        # self.tiles[self.WHITE_KING_ROW][6] = Knight(1)
-        # # Bishops
-        # self.tiles[self.BLACK_KING_ROW][2] = Bishop(0)
-        # self.tiles[self.BLACK_KING_ROW][5] = Bishop(0)
-        #
-        # self.tiles[self.WHITE_KING_ROW][2] = Bishop(1)
-        # self.tiles[self.WHITE_KING_ROW][5] = Bishop(1)
-        #
-        # # Queen
-        # self.tiles[self.BLACK_KING_ROW][3] = Queen(0)
-        # self.tiles[self.WHITE_KING_ROW][3] = Queen(1)
-        #
-        # # King
-        # self.tiles[self.BLACK_KING_ROW][4] = King(0)
-        # self.tiles[self.WHITE_KING_ROW][4] = King(1)
+        # Rooks
+        self.tiles[self.BLACK_KING_ROW][0] = Rook(0)
+        self.tiles[self.BLACK_KING_ROW][7] = Rook(0)
+
+        self.tiles[self.WHITE_KING_ROW][0] = Rook(1)
+        self.tiles[self.WHITE_KING_ROW][7] = Rook(1)
+
+        # Knights
+        self.tiles[self.BLACK_KING_ROW][1] = Knight(0)
+        self.tiles[self.BLACK_KING_ROW][6] = Knight(0)
+
+        self.tiles[self.WHITE_KING_ROW][1] = Knight(1)
+        self.tiles[self.WHITE_KING_ROW][6] = Knight(1)
+        # Bishops
+        self.tiles[self.BLACK_KING_ROW][2] = Bishop(0)
+        self.tiles[self.BLACK_KING_ROW][5] = Bishop(0)
+
+        self.tiles[self.WHITE_KING_ROW][2] = Bishop(1)
+        self.tiles[self.WHITE_KING_ROW][5] = Bishop(1)
+
+        # Queen
+        self.tiles[self.BLACK_KING_ROW][3] = Queen(0)
+        self.tiles[self.WHITE_KING_ROW][3] = Queen(1)
+
+        # King
+        self.tiles[self.BLACK_KING_ROW][4] = King(0)
+        self.tiles[self.WHITE_KING_ROW][4] = King(1)
 
     # Prints a pretty version of the game board
     def printBoard(self):

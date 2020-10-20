@@ -2,7 +2,8 @@ import abc
 
 class Piece:
     __metaclass__ = abc.ABCMeta
-
+    DIRECTIONS = 8
+    MAX_LENGTH = 8
     def __init__(self, color):
         self.color = color
 
