@@ -9,7 +9,7 @@ class Queen(Piece):
 
     def setMoves(self):
         # White and Black Pieces
-        self.moves = [Move(-1, -1, self.MAX_LENGTH), Move(0, -1, self.MAX_LENGTH),
-                      Move(1, -1, self.MAX_LENGTH), Move(1, 0, self.MAX_LENGTH),
-                      Move(1, 1, self.MAX_LENGTH), Move(0, 1, self.MAX_LENGTH),
-                      Move(-1, 1, self.MAX_LENGTH), Move(-1, 0, self.MAX_LENGTH)]
+        self.moves = [Move(self.DIRECTIONS['NW'], self.MAX_LENGTH), Move(self.DIRECTIONS['N'], self.MAX_LENGTH),
+                      Move(self.DIRECTIONS['NE'], self.MAX_LENGTH), Move(self.DIRECTIONS['E'], self.MAX_LENGTH),
+                      Move(self.DIRECTIONS['SE'], self.MAX_LENGTH), Move(self.DIRECTIONS['S'], self.MAX_LENGTH),
+                      Move(self.DIRECTIONS['SW'], self.MAX_LENGTH), Move(self.DIRECTIONS['W'], self.MAX_LENGTH)]

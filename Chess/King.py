@@ -9,7 +9,7 @@ class King(Piece):
 
     def setMoves(self):
         # White and Black Pieces
-        self.moves = [Move(-1, -1, 1), Move(0, -1, 1),
-                      Move(1, -1, 1), Move(1, 0, 1),
-                      Move(1, 1, 1), Move(0, 1, 1),
-                      Move(-1, 1, 1), Move(-1, 0, 1)]
+        self.moves = [Move(self.DIRECTIONS['NW'], 1), Move(self.DIRECTIONS['N'], 1),
+                      Move(self.DIRECTIONS['NE'], 1), Move(self.DIRECTIONS['E'], 1),
+                      Move(self.DIRECTIONS['SE'], 1), Move(self.DIRECTIONS['S'], 1),
+                      Move(self.DIRECTIONS['SW'], 1), Move(self.DIRECTIONS['W'], 1)]

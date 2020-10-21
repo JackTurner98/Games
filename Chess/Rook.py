@@ -9,4 +9,7 @@ class Rook(Piece):
 
     def setMoves(self):
         # White and Black Pieces
-        self.moves = [None, Move(0, -1, self.MAX_LENGTH), None, Move(1, 0, self.MAX_LENGTH), None, Move(0, 1, self.MAX_LENGTH), None, Move(-1, 0, self.MAX_LENGTH)]
+        self.moves = [Move(self.DIRECTIONS['NW'], 0), Move(self.DIRECTIONS['N'], self.MAX_LENGTH),
+                      Move(self.DIRECTIONS['NE'], 0), Move(self.DIRECTIONS['E'], self.MAX_LENGTH),
+                      Move(self.DIRECTIONS['SE'], 0), Move(self.DIRECTIONS['S'], self.MAX_LENGTH),
+                      Move(self.DIRECTIONS['SW'], 0), Move(self.DIRECTIONS['W'], self.MAX_LENGTH)]

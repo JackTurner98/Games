@@ -2,7 +2,14 @@ import abc
 
 class Piece:
     __metaclass__ = abc.ABCMeta
-    DIRECTIONS = 8
+    DIRECTIONS = {  'NW': (-1, -1),
+                    'N':  (0, -1),
+                    'NE': (1, -1),
+                    'E':  (1, 0),
+                    'SE': (1, 1),
+                    'S':  (0, 1),
+                    'SW': (-1, 1),
+                    'W':  (-1, 0)}
     MAX_LENGTH = 8
     def __init__(self, color):
         self.color = color

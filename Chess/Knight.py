@@ -9,5 +9,5 @@ class Knight(Piece):
 
     def setMoves(self):
         # White and Black Pieces
-        self.moves = [Move(-2, -1, 1), Move(-1, -2, 1), Move(1, -2, 1), Move(2, -1, 1),
-                      Move(2, 1, 1), Move(1, 2, 1), Move(-1, 2, 1), Move(-2, 1, 1)]
+        self.moves = [Move((-2, -1), 1), Move((-1, -2), 1), Move((1, -2), 1), Move((2, -1), 1),
+                      Move((2, 1), 1), Move((1, 2), 1), Move((-1, 2), 1), Move((-2, 1), 1)]

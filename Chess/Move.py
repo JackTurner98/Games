@@ -1,16 +1,13 @@
 class Move():
-    DIRECTIONS = {  'NW': (-1, -1),
-                    'N':  (0, -1),
-                    'NE': (1, -1),
-                    'E':  (1, 0),
-                    'SE': (1, 1),
-                    'S':  (0, 1),
-                    'SW': (-1, 1),
-                    'W':  (-1, 0)}
+
 
     def __init__(self, dir, length):
+        """
+            dir: (x, y) tuple
+            length: length of move
+        """
         self.length = length
-        self.x, self.y = DIRECTION[dir]
+        self.x, self.y = dir
 
     def getLength(self):
         return self.length
